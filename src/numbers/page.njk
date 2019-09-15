@@ -1,0 +1,13 @@
+---
+pagination:
+  data: collections.numbers
+  size: 1
+  alias: number
+layout: page
+renderData:
+    title: Number {{ fileSlug }}
+eleventyExcludeFromCollections: true
+permalink: "/numbers/{{ number.fileSlug }}/index.html"
+---
+
+{{ number.templateContent | safe }}

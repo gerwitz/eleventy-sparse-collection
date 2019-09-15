@@ -1,0 +1,19 @@
+---
+title: Ten Numbers
+tags:
+pagination:
+  data: collections.numbers
+  size: 10
+eleventyExcludeFromCollections: true
+permalink: /numbers/index.html
+---
+
+This is a list of numbers
+
+<ol>
+{% for number in pagination.items %}
+  <li>
+    <a href="{{ number.url }}">Number {{ number.fileSlug }}</a>
+  </li>
+{% endfor %}
+</ol>
